@@ -8,15 +8,21 @@ const ResultRow = props => (
     </tr>
 );
 
-const ResultsTable = props => (
-    <Table className="results-table col-md-6">
-    <tbody>
-        <ResultRow name="Monthly Payment" value={props.payment} />
-        <ResultRow name="Total Loan Cost" value={props.cost} />
-        <ResultRow name="Total Interest" value={props.interest} />
-        <ResultRow name="Number of Payments" value={props.payments} />
-    </tbody>
-    </Table>
-);
+const ResultsTable = props => {
+    const formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: "USD"
+    });
+    return (
+        <Table className="results-table col-md-6">
+            <tbody>
+                <ResultRow name="Monthly Payment" value={formatter.format(props.payment)} />
+                <ResultRow name="Total Loan Cost" value={formatter.format(props.cost)} />
+                <ResultRow name="Total Interest" value={formatter.format(props.interest)} />
+                <ResultRow name="Number of Payments" value={formatter.format(props.payments)} />
+            </tbody>
+        </Table>
+    );
+};
 
 export default ResultsTable;
