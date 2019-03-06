@@ -25,14 +25,14 @@ function calcLoanStats(rate, term, principal, extra) {
         totalCost += paymentAmount;
         paymentCount++;
 
-        principal -= (principalPayment + extra);
+        remainingPrincipal -= (principalPayment + extra);
     }
 
     return {
         payment: paymentAmount,
         cost: totalCost,
         interest: totalInterest,
-        count: paymentCount
+        count: paymentCount - 1
     };
 }
 

@@ -18,19 +18,19 @@ const MortgageForm = (props) => (
         <tbody>
         <tr>
             <ParameterInput name="loan-amount"
-                    changed={props.updateAmount}
+                    changed={props.amountChanged}
                     default={props.amount}
                     title="Loan Amount" />
             <ParameterInput name="interest-rate"
-                    changed={props.updateRate}
+                    changed={props.rateChanged}
                     default={props.rate}
                     title="Interest Rate (Percent)" />
             <ParameterInput name="loan-term"
-                    changed={props.updateTerm}
+                    changed={props.termChanged}
                     default={props.term}
                     title="Loan Term (Years)" />
             <ParameterInput name="extra-principal"
-                    changed={props.updateExtra}
+                    changed={props.extraChanged}
                     default={props.extra}
                     title="Extra Principal" />
         </tr>
