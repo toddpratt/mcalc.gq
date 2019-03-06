@@ -5,7 +5,7 @@ class Banner extends Component {
     render() {
         return (
             <Jumbotron>
-                <h2>Mortgage Calculator v1.0</h2>
+                <h2>Mortgage Calculator</h2>
             </Jumbotron>
         );
     }
