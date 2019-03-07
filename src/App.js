@@ -63,7 +63,7 @@ class App extends Component {
 
     updateRate(ev) {
         const self = this;
-        const rate = parseInt(ev.target.value);
+        const rate = parseFloat(ev.target.value);
         this.setState((state, props) => {
             const stats = self.getStats(
                 rate, state.term, state.amount, state.extra);
