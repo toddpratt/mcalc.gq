@@ -16,10 +16,10 @@ const ResultsTable = props => {
     return (
         <Table className="results-table col-md-6">
             <tbody>
-                <ResultRow name="Monthly Payment" value={formatter.format(props.payment)} />
-                <ResultRow name="Total Loan Cost" value={formatter.format(props.cost)} />
-                <ResultRow name="Total Interest" value={formatter.format(props.interest)} />
-                <ResultRow name="Number of Payments" value={formatter.format(props.payments)} />
+                <ResultRow name="Monthly Payment" value={formatter.format(props.payment || 0)} />
+                <ResultRow name="Total Loan Cost" value={formatter.format(props.cost || 0)} />
+                <ResultRow name="Total Interest" value={formatter.format(props.interest || 0)} />
+                <ResultRow name="Number of Payments" value={(props.payments || 0).toFixed(0)} />
             </tbody>
         </Table>
     );
