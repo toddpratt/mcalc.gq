@@ -9,12 +9,11 @@ const Banner = props => {
                 <p>Want to know how much money you'll
                 save and how much faster you'll
                 pay off your loan if you make principal
-                payments?  This is where you want to
-        be.</p>
+                payments?  This is where you want to be.</p>
 
                 <p>None of the data you enter on this
                 page will be transmitted anywhere else,
-        not even back to this site.</p>
+                not even back to this site.</p>
             </div>
 
         </div>
